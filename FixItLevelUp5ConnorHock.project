@@ -21,6 +21,22 @@
             "seeCustomers", 
             "seeCustomers.json"
           ]
+        }, 
+        {
+          "!type": "External", 
+          "file": [
+            "forms", 
+            "deleteUpdateCustomer", 
+            "deleteUpdateCustomer.json"
+          ]
+        }, 
+        {
+          "!type": "External", 
+          "file": [
+            "forms", 
+            "addCustomer", 
+            "addCustomer.json"
+          ]
         }
       ], 
       "configxml": null, 

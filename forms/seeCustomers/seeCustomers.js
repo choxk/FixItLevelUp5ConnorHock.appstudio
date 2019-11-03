@@ -20,8 +20,8 @@ seeCustomers.onshow=function(){
   hamMenu.clear()
   hamMenu.addItem("Sign In/Out") 
   hamMenu.addItem("See Customers")
-  hamMenu.addItem("Delete Customers")
   hamMenu.addItem("Edit Customers")
+  hamMenu.addItem("Delete Customers")
   hamMenu.addItem("Add Customers")
 }
 
@@ -62,20 +62,20 @@ hamMenu.onclick=function(s){
        return
     }
     switch(s) {
-      case "Sign Out":
+      case "Sign In/Out":
           hmbrMenu.hide()
           btnSignIn.show()
           break
-      case "See Customer":
-          ChangeForm(seeCustomer)
+      case "See Customers":
+          ChangeForm(seeCustomers)
           break
-       case "Edit Customer":
+       case "Edit Customers":
           ChangeForm(deleteUpdateCustomer)
           break
-       case "Delete Customer":
+       case "Delete Customers":
           ChangeForm(deleteUpdateCustomer)
           break
-      case "Add Customer":
+      case "Add Customers":
           ChangeForm(addCustomer)
           break
      }
