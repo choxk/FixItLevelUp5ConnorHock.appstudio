@@ -1,19 +1,3 @@
-/* Scenario: The user should be able to see all of the companies currently in the 
-database when the program starts and the form loads. Then they can pick one, and 
-the program will show them all of the information for that company in a nice format like this:   
-
-          Bobs Company
-          2112 F St.
-          Omaha, NE 55678
-
-Requirements:
-  - Use only controls (no popups unless Modal, no prompts, etc).
-  - Use only template literals.
-  - Use a dropdown for showing the company names
-  - Use a control of your choice to display the company details
-  - Change at least 5 properties of the form and/or controls to improve how it looks visually. */
-
-
 seeCustomers.onshow=function(){
   drpCompanyNames.clear()
   let query = "SELECT name FROM customer"
@@ -27,10 +11,10 @@ seeCustomers.onshow=function(){
         let message = ""
         for (i = 0; i <= results.length - 1; i++){
             message = message + results[i][0] + "\n"
-            drpCompanyName.addItem(results[i][0])
+            drpCompanyNames.addItem(results[i][0])
         }
      } 
-  } else{
+  } else {
       NSB.MsgBox("Something run")
   }
   hamMenu.clear()
@@ -56,7 +40,7 @@ drpCompanyNames.onclick=function(s){
           let results2 = JSON.parse(req2.responseText)
           if (results2.length == 0){
               txtResults.value("There are no companies of that name/type.")
-          }else {        
+          } else {        
               console.log("The parsed JSON is " + results2)
               console.log("eg. temp[0] or the first row in the big array is " + results2[0])
               console.log("To retrieve to Paul, must have results[0][1]: " + results2[0][2])
@@ -67,7 +51,7 @@ drpCompanyNames.onclick=function(s){
                   message2 = message2 + results2[0][i] + ", "
               txtResults.value = message2
           } 
-      }else{
+      } else {
         NSB.MsgBox("Error")
       }
    }
@@ -77,3 +61,22 @@ hamMenu.onclick=function(s){
     if (typeof(s) == "object") {
        return
     }
+    switch(s) {
+      case "Sign Out":
+          hmbrMenu.hide()
+          btnSignIn.show()
+          break
+      case "See Customer":
+          ChangeForm(seeCustomer)
+          break
+       case "Edit Customer":
+          ChangeForm(deleteUpdateCustomer)
+          break
+       case "Delete Customer":
+          ChangeForm(deleteUpdateCustomer)
+          break
+      case "Add Customer":
+          ChangeForm(addCustomer)
+          break
+     }
+}
