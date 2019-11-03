@@ -29,7 +29,7 @@
   "icon": "", 
   "iconTitle": "", 
   "id": "btnAdd", 
-  "left": 496, 
+  "left": 104, 
   "mAll": "", 
   "mBottom": "", 
   "mLeft": "", 
@@ -60,7 +60,7 @@
   "size": " btn-md", 
   "style": "", 
   "toggleControl": "", 
-  "top": 520, 
+  "top": 312, 
   "value": "Add", 
   "width": "auto"
 }

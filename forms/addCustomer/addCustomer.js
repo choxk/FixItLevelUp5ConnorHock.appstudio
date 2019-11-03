@@ -18,7 +18,6 @@ addCustomer.onshow=function(){
       NSB.MsgBox("Something run")
   }
   hamMenu2.clear()
-  hamMenu2.addItem("Sign In/Out") 
   hamMenu2.addItem("See Customers")
   hamMenu2.addItem("Edit Customers")
   hamMenu2.addItem("Delete Customers")
@@ -30,10 +29,6 @@ hamMenu2.onclick=function(s) {
        return
     }
     switch(s) {
-      case "Sign In/Out":
-          hmbrMenu.hide()
-          btnSignIn.show()
-          break
       case "See Customers":
           ChangeForm(seeCustomers)
           break
